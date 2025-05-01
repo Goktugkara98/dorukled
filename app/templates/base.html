@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{% block description %}DorukLed Reklam - Profesyonel LED Tabela, Dijital Menü Panosu, Neon ve Totem Çözümleri{% endblock %}">
+    <meta name="author" content="DorukLed Reklam Ekibi">
+    <title>{% block title %}DorukLed Reklam | Profesyonel LED Çözümleri{% endblock %}</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="{{ url_for('static', filename='img/apple-touch-icon-57x57-precomposed.png') }}">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="{{ url_for('static', filename='img/apple-touch-icon-72x72-precomposed.png') }}">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="{{ url_for('static', filename='img/apple-touch-icon-114x114-precomposed.png') }}">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="{{ url_for('static', filename='img/apple-touch-icon-144x144-precomposed.png') }}">
+    
+    <!-- GOOGLE WEB FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+    <!-- SPECIFIC CSS -->
+    <link href="{{ url_for('static', filename='css/home_1.css') }}" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+    <div id="page">
+        <header class="version_2">
+            <div class="layer"></div><!-- Mobile menu overlay mask -->
+            <div class="main_header">
+                <div class="container-fluid px-3 px-xl-5">
+                    <div class="row small-gutters">
+                        <div class="col-xl-3 col-lg-3 d-lg-flex align-items-center">
+                            <div id="logo">
+                                <a href="{{ url_for('main.homepage') }}"><img src="{{ url_for('static', filename='img/brands/dorukled.svg') }}" alt="DorukLed Reklam Logo" width="120" height="40"></a>
+                            </div>
+                        </div>
+                        <nav class="col-xl-6 col-lg-6">
+                            <a class="open_close" href="javascript:void(0);">
+                                <div class="hamburger hamburger--spin">
+                                    <div class="hamburger-box">
+                                        <div class="hamburger-inner"></div>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- Mobile menu button -->
+                            <div class="main-menu text-center">
+                                <div id="header_menu">
+                                    <a href="{{ url_for('main.homepage') }}"><img src="{{ url_for('static', filename='img/brands/dorukled.svg') }}" alt="DorukLed Reklam Logo" width="120" height="40"></a>
+                                    <a href="#" class="open_close" id="close_in"><i class="ti-close"></i></a>
+                                </div>
+                                <ul class="navbar-menu">
+                                    <li><a href="{{ url_for('main.homepage') }}">Anasayfa</a></li>
+                                    <li class="dropdown nav-dropdown">
+                                        <a href="#" class="dropdown-toggle" id="urunlerimizDropdown">
+                                            Ürünlerimiz
+                                        </a>
+                                        <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="urunlerimizDropdown">
+                                            <li><a href="{{ url_for('main.flex_yazi_neon_tabelalar') }}">Flex Yazı Neon Tabelalar</a></li>
+                                            <li><a href="{{ url_for('main.flex_ozel_tasarim_neon_tabelalar') }}">Flex Özel Tasarım Neon Tabelalar</a></li>
+                                            <li><a href="{{ url_for('main.ic_mekan_led_tabelalar') }}">İç Mekan LED Tabelalar</a></li>
+                                            <li><a href="{{ url_for('main.dis_mekan_led_tabelalar') }}">Dış Mekan LED Tabelalar</a></li>
+                                            <li><a href="{{ url_for('main.rgb_led_tabelalar') }}">RGB LED Tabelalar</a></li>
+                                            <li><a href="{{ url_for('main.kayan_yazi_led_tabelalar') }}">Kayan Yazı LED Tabelalar</a></li>
+                                            <li><a href="{{ url_for('main.ic_mekan_led_ekranlar') }}">İç Mekan LED Ekranlar</a></li>
+                                            <li><a href="{{ url_for('main.dis_mekan_led_ekranlar') }}">Dış Mekan LED Ekranlar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{{ url_for('main.references') }}">Referanslar</a></li>
+                                    <li><a href="{{ url_for('main.about') }}">Hakkımızda</a></li>
+                                    <li><a href="{{ url_for('main.contact') }}">İletişim</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="social-bar d-flex align-items-center justify-content-end">
+                                <!-- Desktop: Sadece metin ve numara -->
+                                <a class="contact-link d-none d-md-inline-block me-3" href="tel://905442140301" aria-label="Telefon">
+                                    <span><strong>İletişime Geçin</strong> +90 544 214 0301</span>
+                                </a>
+                                <!-- Sosyal medya ikonları -->
+                                <div class="social-icons">
+                                    <a href="https://facebook.com/" class="social-link" target="_blank" rel="noopener" aria-label="Facebook">
+                                        <i class="bi bi-facebook"></i>
+                                    </a>
+                                    <a href="https://instagram.com/" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+                                        <i class="bi bi-instagram"></i>
+                                    </a>
+                                    <a href="https://tiktok.com/" class="social-link" target="_blank" rel="noopener" aria-label="TikTok">
+                                        <i class="bi bi-tiktok"></i>
+                                    </a>
+                                    <a href="https://wa.me/905442140301" class="social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <!-- Mobil: Sadece ikon -->
+                                    <a class="social-link d-flex d-md-none" href="tel://905442140301" aria-label="Telefon">
+                                        <i class="bi bi-telephone"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /row -->
+                </div>
+            </div>
+        </header>
+        
+        {% block content %}{% endblock %}
+        
+        <footer class="footer-v2" id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-logo mb-3">
+                            <img src="{{ url_for('static', filename='img/brands/dorukled.svg') }}" alt="DorukLed Logo" width="150">
+                        </div>
+                        <p class="footer-about">Afyonkarahisar'da LED tabela, neon, dijital menü panosu ve daha fazlasını üreten profesyonel reklam şirketiyiz. Müşteri memnuniyeti odaklı hizmet anlayışımızla ihtiyacınıza özel çözümler sunuyoruz.</p>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <h3 class="footer-heading">Hızlı Bağlantılar</h3>
+                        <ul class="footer-nav">
+                            <li><a href="{{ url_for('main.homepage') }}">Anasayfa</a></li>
+                            <li><a href="{{ url_for('main.homepage') }}#products">Ürünlerimiz</a></li>
+                            <li><a href="{{ url_for('main.references') }}">Referanslar</a></li>
+                            <li><a href="{{ url_for('main.about') }}">Hakkımızda</a></li>
+                            <li><a href="{{ url_for('main.contact') }}">İletişim</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="footer-heading">İletişim</h3>
+                        <ul class="footer-contact-list">
+                            <li>
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Afyonkarahisar, Türkiye</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-telephone"></i>
+                                <a href="tel://905442140301">+90 544 214 0301</a>
+                            </li>
+                            <li>
+                                <i class="bi bi-envelope"></i>
+                                <a href="mailto:info@dorukled.com">info@dorukled.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="footer-heading">Sosyal Medya</h3>
+                        <div class="footer-social-icons">
+                            <a href="https://facebook.com/" target="_blank" class="social-link" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="https://instagram.com/" target="_blank" class="social-link" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://tiktok.com/" target="_blank" class="social-link" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                            <a href="https://wa.me/905442140301" target="_blank" class="social-link" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="footer-divider">
+                <div class="row footer-bottom-row">
+                    <div class="col-md-6">
+                        <p class="copyright">&copy; 2025 DorukLed Reklam. Tüm hakları saklıdır.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <ul class="footer-legal-links">
+                            <li><a href="#0">Kullanım Koşulları</a></li>
+                            <li><a href="#0">Gizlilik</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--/footer-->
+    </div>
+    <!-- page -->
+    
+    <div id="toTop"></div><!-- Back to top button -->
+    
+    <!-- COMMON SCRIPTS -->
+    <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/common_scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+    {% block extra_js %}{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+
+{% block title %}Referanslar | DorukLed Reklam{% endblock %}
+{% block description %}DorukLed Reklam olarak ürettiğimiz ve kurulumunu yaptığımız LED tabela, neon tabela, ekran ve diğer ürünlerimizin bazı örneklerini bu sayfada bulabilirsiniz. Kalite ve güvenin adresi DorukLed!{% endblock %}
+
+{% block content %}
+<main class="bg_white">
+    <!-- Kurumsal Başlık Bölümü -->
+    <section class="page-header bg-light py-5 border-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="fw-bold mb-2">Referanslar</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="{{ url_for('main.homepage') }}">Anasayfa</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Referanslar</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Referanslar Galerisi -->
+    <section class="references-gallery py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="fw-bold mb-3">Projelerimizden Seçmeler</h2>
+                    <p class="lead">Farklı sektörlerde, farklı ihtiyaçlara özel ürettiğimiz LED ve neon tabela uygulamalarımızdan bazıları:</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                {% set reference_images = [
+                    'flex-neon (1).jpeg', 'flex-neon (2).jpeg', 'flex-neon (3).jpeg', 'flex-neon (4).jpeg',
+                    'flex-neon (5).jpeg', 'flex-neon (6).jpeg', 'flex-neon (7).jpeg', 'flex-neon (8).jpeg',
+                    'flex-neon (9).jpeg', 'flex-neon (10).jpeg', 'flex-neon (11).jpeg', 'flex-neon (12).jpeg',
+                    'flex-neon (13).jpeg', 'flex-neon (14).jpeg', 'flex-neon (15).jpeg', 'flex-neon (16).jpeg',
+                    'flex-neon (17).jpeg', 'flex-neon (18).jpeg'
+                ] %}
+                {% for image in reference_images %}
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="reference-item shadow-sm mb-4 h-100 rounded-3 overflow-hidden position-relative">
+                        <a href="{{ url_for('static', filename='img/references/' ~ image) }}" class="glightbox" data-gallery="gallery1" data-glightbox="title: DorukLed Referans Projesi">
+                            <img src="{{ url_for('static', filename='img/references/' ~ image) }}" class="img-fluid w-100 h-100" alt="DorukLed Referans">
+                            <div class="reference-overlay d-flex flex-column justify-content-center align-items-center">
+                                <i class="bi bi-zoom-in fs-4"></i>
+                                <span class="mt-2 small">Büyütmek için tıklayın</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim CTA Bölümü -->
+    <section class="references-cta py-5 bg-light border-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="h3 fw-bold mb-3">Özel Projeleriniz İçin Bizimle İletişime Geçin</h2>
+                    <p class="mb-4">Daha fazla referans görmek veya kendi projeniz için teklif almak isterseniz, ekibimiz size yardımcı olmaktan memnuniyet duyacaktır.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="tel://905442140301" class="btn btn-primary px-4 py-2"><i class="bi bi-telephone me-2"></i>+90 544 214 0301</a>
+                        <a href="{{ url_for('main.contact') }}" class="btn btn-outline-primary px-4 py-2"><i class="bi bi-envelope me-2"></i>İletişim Formu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block extra_css %}
+<!-- GLightbox CSS -->
+<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+<style>
+.reference-item {
+    background: #f8f9fa;
+    min-height: 180px;
+    max-height: 240px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #eaeaea;
+    position: relative;
+}
+
+.reference-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.reference-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+}
+
+.reference-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.reference-item:hover .reference-overlay {
+    opacity: 1;
+}
+
+.reference-item:hover img {
+    transform: scale(1.05);
+}
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<!-- GLightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // GLightbox'ı başlat
+    const lightbox = GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: true,
+        zoomable: true,
+        draggable: true,
+        openEffect: 'zoom',
+        closeEffect: 'fade'
+    });
+});
+</script>
+{% endblock %}

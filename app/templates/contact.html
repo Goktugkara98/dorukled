@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+
+{% block title %}İletişim | DorukLed Reklam{% endblock %}
+{% block description %}DorukLed Reklam ile iletişime geçin. Projeleriniz, ürünlerimiz veya teklif talepleriniz için bize ulaşın. Telefon, e-posta ve iletişim formu ile hızlı dönüş!{% endblock %}
+
+{% block extra_css %}
+<link href="{{ url_for('static', filename='css/contact.css') }}" rel="stylesheet">
+<style>
+.contact-card {
+    transition: transform 0.3s ease;
+}
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Form Stilleri */
+.form-floating>.form-control:focus~label, 
+.form-floating>.form-control:not(:placeholder-shown)~label {
+    color: #0d6efd;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<main class="bg_white">
+    <!-- Kurumsal Başlık Bölümü -->
+    <section class="page-header bg-light py-5 border-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="fw-bold mb-2">İletişim</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="{{ url_for('main.homepage') }}">Anasayfa</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">İletişim</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim Bilgileri -->
+    <section class="contact-info py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="fw-bold mb-4">Bize Ulaşın</h2>
+                    <p class="lead">Projeleriniz için özel çözümler sunmak üzere ekibimiz hazır. Aşağıdaki iletişim kanallarından bize ulaşabilir veya iletişim formunu doldurarak mesaj gönderebilirsiniz.</p>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-card text-center p-4 bg-white rounded-3 shadow-sm h-100">
+                        <div class="contact-icon mb-3">
+                            <i class="bi bi-telephone-fill text-primary fs-1"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-2">Telefon</h3>
+                        <p class="mb-2">Hafta içi 09:00 - 18:00 arası</p>
+                        <a href="tel://905442140301" class="text-decoration-none fw-bold">+90 544 214 0301</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-card text-center p-4 bg-white rounded-3 shadow-sm h-100">
+                        <div class="contact-icon mb-3">
+                            <i class="bi bi-envelope-fill text-primary fs-1"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-2">E-posta</h3>
+                        <p class="mb-2">24 saat içinde dönüş sağlıyoruz</p>
+                        <a href="mailto:info@dorukled.com" class="text-decoration-none fw-bold">info@dorukled.com</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-card text-center p-4 bg-white rounded-3 shadow-sm h-100">
+                        <div class="contact-icon mb-3">
+                            <i class="bi bi-geo-alt-fill text-primary fs-1"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-2">Adres</h3>
+                        <p class="mb-2">Showroom ve Atölye</p>
+                        <p class="mb-0 fw-bold">Afyonkarahisar, Türkiye</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim Formu -->
+    <section class="contact-form py-5 bg-light border-top border-bottom">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm rounded-3 overflow-hidden">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="h3 fw-bold text-center mb-4">Mesaj Gönderin</h2>
+                            <p class="text-center text-muted mb-4">Teklif talebi, ürün bilgisi veya diğer sorularınız için formu doldurun.</p>
+                            
+                            <form method="post" action="#" class="needs-validation" novalidate>
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" name="name" placeholder="Adınız Soyadınız" required>
+                                            <label for="name">Adınız Soyadınız</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="E-posta Adresiniz" required>
+                                            <label for="email">E-posta Adresiniz</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Telefon Numaranız">
+                                            <label for="phone">Telefon Numaranız</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="subject" name="subject" required>
+                                                <option value="" selected disabled>Seçiniz</option>
+                                                <option value="teklif">Teklif Talebi</option>
+                                                <option value="bilgi">Ürün Bilgisi</option>
+                                                <option value="destek">Teknik Destek</option>
+                                                <option value="diger">Diğer</option>
+                                            </select>
+                                            <label for="subject">Konu</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" id="message" name="message" placeholder="Mesajınız" style="height: 120px" required></textarea>
+                                            <label for="message">Mesajınız</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 d-flex justify-content-between align-items-center flex-wrap gap-3 mt-2">
+                                        <div class="form-text text-muted small">
+                                            <i class="bi bi-info-circle me-1"></i> Form şu an demo amaçlıdır.
+                                        </div>
+                                        <button type="submit" class="btn btn-primary px-4 py-2">
+                                            <i class="bi bi-send me-2"></i>Gönder
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sosyal Medya Bölümü -->
+    <section class="social-connect py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="h3 fw-bold mb-4">Sosyal Medyada Bizi Takip Edin</h2>
+                    <div class="d-flex justify-content-center gap-4">
+                        <a href="https://facebook.com/" class="social-link" target="_blank" rel="noopener" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://instagram.com/" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://tiktok.com/" class="social-link" target="_blank" rel="noopener" aria-label="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                        <a href="https://wa.me/905442140301" class="social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Harita Bölümü -->
+    <section class="contact-map">
+        <div class="container-fluid p-0">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d534.3085066037235!2d30.541491330770686!3d38.762064243337264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cf17c5028917df%3A0x95cd9b32d771689d!2sDorukled!5e0!3m2!1str!2str!4v1746034655564!5m2!1str!2str" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+</main>
+{% endblock %}

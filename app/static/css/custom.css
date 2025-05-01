@@ -1,0 +1,2127 @@
+/*============================================================================================*/
+/* Your custom styles below */
+/*============================================================================================*/
+
+/* Video overlay gradient - minimalist tasarım */
+.video-overlay-gradient {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 100%);
+}
+
+/* Modern video overlay - yeni stil */
+.video-overlay-modern {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(180deg, 
+        rgba(0,0,0,0.4) 0%, 
+        rgba(0,0,0,0.6) 50%,
+        rgba(0,0,0,0.8) 100%);
+}
+
+/* Modern hero content wrapper - hem yatay hem dikey ortalama */
+.hero-content-wrapper {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modern hero content - ortalama için flex ve min-height */
+.modern-hero-content {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+}
+
+/* Modern hero title */
+.modern-hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Modern hero subtitle */
+.modern-hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+}
+
+/* Modern hero buttons */
+.modern-hero-buttons {
+    margin-top: 2rem;
+}
+
+/* Modern explore button */
+.btn-modern-explore {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #0e5cad, #2a78cd);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-modern-explore:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    color: #fff;
+}
+
+.btn-modern-explore::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    transform: translateX(-100%);
+    transition: all 0.6s ease;
+}
+
+.btn-modern-explore:hover::after {
+    transform: translateX(0);
+}
+
+.btn-modern-explore span {
+    margin-right: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-modern-explore i {
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-modern-explore:hover i {
+    transform: translateX(5px);
+}
+
+/* Animation classes */
+.animate-fade-in {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.hero-logo.animate-fade-in {
+    animation-delay: 0.2s;
+}
+
+.modern-hero-title.animate-fade-in {
+    animation-delay: 0.4s;
+}
+
+.modern-hero-subtitle.animate-fade-in {
+    animation-delay: 0.6s;
+}
+
+.modern-hero-buttons.animate-fade-in {
+    animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+    .modern-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .modern-hero-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .modern-hero-title {
+        font-size: 2rem;
+    }
+    
+    .modern-hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn-modern-explore {
+        padding: 0.8rem 2rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Yeni minimalist hero tasarımı */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.hero-logo {
+    margin-bottom: 2rem;
+    transform: scale(1.8);
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-logo-img {
+    filter: brightness(0) invert(1);
+    max-width: 100%;
+    height: auto;
+}
+
+.hero-tagline {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.9);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    position: relative;
+    padding-bottom: 1.5rem;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.hero-tagline:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.hero-action {
+    animation: fadeIn 2s ease-out;
+}
+
+.explore-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.explore-button:hover {
+    transform: translateY(-5px);
+    color: #fff;
+}
+
+.explore-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.explore-button:hover .explore-circle {
+    background-color: rgba(255,255,255,0.2);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.explore-circle i {
+    font-size: 1.5rem;
+    animation: bounce 2s infinite;
+}
+
+.explore-button span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Responsive tasarım */
+@media (max-width: 767px) {
+    .hero-logo {
+        transform: scale(1.5);
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-tagline {
+        font-size: 1.1rem;
+        letter-spacing: 3px;
+        margin-bottom: 3rem;
+    }
+    
+    .explore-circle {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Aspect Ratio Box for Product Images */
+.aspect-ratio-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 900 / 550;
+    background: #f3f3f3;
+    overflow: hidden;
+}
+
+.aspect-ratio-box img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block;
+    background: #f3f3f3;
+    border-radius: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+}
+
+.owl-carousel .owl-stage-outer {
+    overflow: hidden !important;
+}
+
+.owl-carousel .owl-item {
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden;
+}
+
+.prod_pics.owl-carousel {
+    padding: 0 0px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Carousel item'larına aspect-ratio ve radius uygula */
+.prod_pics .owl-item {
+    aspect-ratio: 900 / 550;
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f3f3;
+}
+
+.prod_pics .owl-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    background: #f3f3f3;
+}
+
+/* Carousel içindeki görsel hover efekti (isteğe bağlı) */
+.aspect-ratio-box img:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+}
+
+/* Carousel dış kapsayıcılarının border ve box-shadow'unu kaldır */
+.prod_pics,
+.prod_pics.owl-carousel,
+.prod_pics .owl-stage-outer,
+.prod_pics .owl-item,
+.prod_pics .item {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+.prod_pics.owl-carousel .owl-stage-outer {
+    border-radius: 20px;
+    overflow: hidden !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+/* .owl-item için width, margin, padding zorlamalarını kaldır */
+.prod_pics .owl-item {
+    /* width: 100% !important; */
+    /* margin: 0 !important; */
+    /* padding: 0 !important; */
+    overflow: visible;
+    border-radius: 0 !important;
+}
+
+/* Görselde sadece köşeler radius alacak */
+.prod_pics .aspect-ratio-box img {
+    border-radius: 0 !important;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    background: #f3f3f3;
+}
+
+/* Carousel görseli ve kapsayıcılarının arka planını ve border'ını kaldır (border-radius'u koru) */
+.prod_pics .item,
+.prod_pics .owl-item {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+.prod_pics .item img,
+.prod_pics .owl-item img {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    /* border-radius'u dokunma */
+}
+
+/* Kare oranlı kutu: 1x1 aspect ratio */
+.aspect-ratio-box-1x1 {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #f3f3f3;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.aspect-ratio-box-1x1 img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    display: block;
+}
+
+/* Buzlu cam efektli buton */
+.btn-glass {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 1.2rem 3rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+/* Başlığı tam ortalamak ve belirginleştirmek için */
+.center-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto 1.5rem auto;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+}
+
+/* Glassmorphism efekti (buzlu cam) */
+.btn-glass {
+    background: rgba(255, 255, 255, 0.18) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1.5px solid rgba(255,255,255,0.35) !important;
+    color: #fff !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
+    transition: all 0.3s;
+}
+
+.btn-modern-explore.btn-glass {
+    background: rgba(255,255,255,0.18) !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+    color: #fff !important;
+}
+
+.btn-modern-explore.btn-glass:hover {
+    background: rgba(255,255,255,0.28) !important;
+    color: #fff !important;
+    transform: translateY(-5px);
+}
+
+.btn-modern-explore i {
+    font-size: 1.3rem;
+    margin-left: 10px;
+    transition: transform 0.3s;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.btn-modern-explore.btn-glass:hover i {
+    transform: translateY(4px) scale(1.18);
+}
+
+/* Telefon numarası stilini düzenleme */
+.phone_top {
+    white-space: nowrap;
+    padding-right: 0;
+    font-size: 14px;
+    margin-left: 5px;
+    color: #222;
+    font-weight: 600;
+}
+
+.phone_top span {
+    display: block;
+    font-size: 11px;
+}
+
+@media (min-width: 1200px) {
+    .phone_top {
+        font-size: 15px;
+    }
+    
+    .phone_top span {
+        font-size: 12px;
+    }
+}
+
+/* Sosyal medya ikonları ve telefon butonu düzenlemeleri */
+.social-icons-wrapper {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-text-link {
+    height: 34px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.social-text-link:hover {
+    transform: translateY(-3px);
+}
+
+.phone_top {
+    color: #b0b5c3;
+    font-size: 14px;
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+.phone_top strong {
+    display: block;
+    font-size: 11px;
+    color: #b0b5c3;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.phone_top span {
+    color: #444;
+    font-weight: 500;
+}
+
+/* Sosyal medya ikonları */
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    transition: all 0.25s ease;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.social-svg {
+    width: 20px;
+    height: 20px;
+    transition: all 0.25s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.social-svg-default {
+    opacity: 1;
+}
+
+.social-svg-hover {
+    opacity: 0;
+}
+
+/* Hover efektleri */
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon:hover .social-svg-default {
+    opacity: 0;
+}
+
+.social-icon:hover .social-svg-hover {
+    opacity: 1;
+}
+
+@media (max-width: 1199px) {
+    .social-icons-wrapper {
+        margin-top: 10px;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 991px) {
+    .social-icons-wrapper {
+        margin-top: 10px;
+        justify-content: center;
+    }
+}
+
+/* Mobilde: Sosyal ikonlar ve telefon simgesi aynı hizada, telefon en sağda (tek satırda) */
+@media (max-width: 991px) {
+    .col-xl-3.col-lg-3.d-lg-flex.align-items-center.justify-content-end.text-end {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        gap: 0 !important;
+    }
+    .social-icons-wrapper {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: auto !important;
+        margin: 0 !important;
+        order: 1;
+        flex: 1 1 auto;
+    }
+    .phone_top {
+        display: flex !important;
+        align-items: center !important;
+        margin-left: 10px !important;
+        order: 2;
+        width: auto !important;
+        text-align: right !important;
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+}
+
+/* Navbar sosyal ikonları */
+.social-navbar .social-icon,
+.social-navbar .whatsapp-svg-link .whatsapp-svg-icon {
+    font-size: 1.45rem;
+    width: 1.45em;
+    height: 1.45em;
+    color: #b0b5c3;
+    opacity: 0.88;
+    transition: color 0.18s, opacity 0.18s, transform 0.16s, filter 0.18s;
+    vertical-align: middle;
+    line-height: 1;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    display: inline-block;
+}
+.social-navbar .social-icon:first-child { margin-left: 0.5rem; }
+.social-navbar .social-icon:last-child { margin-right: 0.5rem; }
+.social-navbar .social-icon:hover,
+.social-navbar .whatsapp-svg-link:hover .whatsapp-svg-icon {
+    opacity: 1;
+    transform: scale(1.18);
+}
+.social-navbar .ti-facebook:hover {
+    color: #1877f3;
+}
+.social-navbar .ti-instagram:hover {
+    color: #e4405f;
+}
+.social-navbar .whatsapp-svg-link .whatsapp-svg-icon {
+    filter: grayscale(1) brightness(0.92);
+}
+.social-navbar .whatsapp-svg-link:hover .whatsapp-svg-icon {
+    filter: none drop-shadow(0 0 2px #25d366) brightness(1.2);
+}
+@media (max-width: 991px) {
+    .social-navbar { margin-top: 0.7rem; }
+}
+
+/* Mobilde navbar iconlarını üst üste ve ortada hizala, telefon simgesiyle çakışmayı engelle */
+@media (max-width: 991px) {
+    header .main_header .row.small-gutters {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    header ul.top_tools {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        float: none !important;
+        margin: 0 auto 0 auto !important;
+        position: static !important;
+        padding: 0 !important;
+        order: 2;
+    }
+    header ul.top_tools > li {
+        float: none !important;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+    .phone_top {
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
+        order: 1;
+        margin-bottom: 6px;
+    }
+}
+
+/* Menü ortalama - daha güçlü ortalama için */
+.main-menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-menu > ul {
+    display: flex;
+    justify-content: center;
+    width: auto !important;
+    margin: 0 auto !important;
+    padding-left: 0;
+    float: none !important;
+    position: relative;
+    left: 0 !important;
+    transform: none !important;
+}
+
+.main-menu > ul > li {
+    text-align: center;
+    float: none !important;
+    display: inline-block;
+}
+
+@media (min-width: 992px) {
+    nav.col-xl-6 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .main-menu > ul {
+        left: 0 !important;
+        transform: translateX(0) !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .main-menu {
+        display: block !important;
+        justify-content: unset !important;
+        align-items: unset !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    .main-menu > ul {
+        display: block !important;
+        left: unset !important;
+        transform: unset !important;
+    }
+    header .main_header nav a.open_close {
+        display: inline-block !important;
+        position: absolute;
+        top: 20px;
+        left: 15px;
+        z-index: 10001;
+    }
+}
+
+/* Dropdown menu for navbar */
+.main-menu ul li.dropdown {
+    position: relative;
+}
+.main-menu ul li.dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    z-index: 1000;
+    padding: 0.5rem 0;
+    border-radius: 4px;
+}
+.main-menu ul li.dropdown:hover .dropdown-menu,
+.main-menu ul li.dropdown:focus-within .dropdown-menu {
+    display: block;
+}
+.main-menu ul li.dropdown .dropdown-menu li {
+    display: block;
+    width: 100%;
+}
+.main-menu ul li.dropdown .dropdown-menu li a {
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    transition: background 0.2s, color 0.2s;
+    font-weight: 500;
+}
+.main-menu ul li.dropdown .dropdown-menu li a:hover {
+    background: #f3f3f3;
+    color: #007bff;
+}
+
+/* Responsive: show dropdown on click for mobile */
+@media (max-width: 991px) {
+  .main-menu ul li.dropdown .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background: #fff;
+    border-radius: 0;
+  }
+  .main-menu ul li.dropdown .dropdown-menu {
+    display: none;
+  }
+  .main-menu ul li.dropdown.open .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Navbar Dropdown Custom Tasarım */
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar-menu > li {
+    position: relative;
+}
+.navbar-menu > li > a {
+    font-size: 1rem;
+    padding: 10px 18px;
+    color: #222;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color 0.2s;
+}
+.navbar-menu > li > a:hover, .navbar-menu > li > a:focus {
+    color: #0080ff;
+}
+.nav-dropdown .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.dropdown-icon {
+    font-size: 0.8em;
+    margin-left: 4px;
+    color: #888;
+}
+.custom-dropdown-menu {
+    min-width: 220px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    padding: 8px 0;
+    margin-top: 10px;
+    font-size: 0.98rem;
+    line-height: 1.4;
+    border: 1px solid #eee;
+}
+.custom-dropdown-menu li a {
+    display: block;
+    padding: 9px 22px;
+    color: #222;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+}
+.custom-dropdown-menu li a:hover, .custom-dropdown-menu li a:focus {
+    background: #f3f8ff;
+    color: #0080ff;
+}
+
+/* Responsive: Mobilde dropdown menü genişliği ve font küçültme */
+@media (max-width: 600px) {
+    .custom-dropdown-menu {
+        min-width: 160px;
+        font-size: 0.92rem;
+    }
+    .navbar-menu > li > a {
+        font-size: 0.98rem;
+        padding: 9px 10px;
+    }
+}
+
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+/* Simplified Glitch Background */
+.glitch-container {
+  height: 120px;
+  margin-bottom: 2rem;
+}
+
+.glitch-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.8);
+  color: rgba(255,255,255,0.15);
+  z-index: 0;
+  width: max-content;
+}
+
+.glitch-text {
+  z-index: 1;
+}
+
+.fw-black {
+  font-weight: 900 !important;
+}
+
+/* Responsive başlık ortalama */
+@media (max-width: 767px) {
+    .center-title {
+        font-size: 1.2rem;
+        padding: 0 10px;
+    }
+}
+
+/* Smooth scroll tüm site için */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ürünler köşe yuvarlatma */
+.grid_item, .grid_item figure, .grid_item img {
+    border-radius: 16px !important;
+    overflow: hidden;
+}
+
+/* Sosyal medya bar ve ikonları - Yeni tasarım */
+.social-bar {
+    margin: 15px 0;
+}
+
+.contact-link {
+    text-decoration: none;
+}
+
+.contact-link span {
+    display: block;
+    line-height: 1.2;
+    text-align: right;
+}
+
+.contact-link strong {
+    display: block;
+    font-size: 11px;
+    color: #b0b5c3;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.contact-link span {
+    color: #222;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #b0b5c3;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.social-link i {
+    font-size: 18px;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-link:hover .bi-facebook {
+    color: #1877f2;
+}
+
+.social-link:hover .bi-instagram {
+    color: #e4405f;
+}
+
+.social-link:hover .bi-tiktok {
+    color: #000000;
+}
+
+.social-link:hover .bi-whatsapp,
+.social-link:hover .bi-telephone {
+    color: #25D366;
+}
+
+@media (max-width: 991px) {
+    .social-bar {
+        justify-content: center !important;
+    }
+}
+
+/* Footer - Yeni Tasarım */
+footer {
+    background-color: #fff;
+    padding: 50px 0 20px;
+    color: #333;
+    position: relative;
+    margin-top: 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+footer h3 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+footer h3:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 30px;
+    height: 2px;
+    background: #0e5cad;
+}
+
+footer h5 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+footer .footer-about {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+footer .links ul li {
+    margin-bottom: 10px;
+}
+
+footer .links ul li a {
+    color: #444;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+footer .links ul li a:hover {
+    color: #007bff;
+    padding-left: 5px;
+}
+
+footer .contacts ul {
+    padding: 0;
+    list-style: none;
+}
+
+footer .contacts ul li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+footer .contacts ul li i {
+    margin-right: 10px;
+    color: #0e5cad;
+    font-size: 18px;
+}
+
+footer .contacts ul li a {
+    color: #444;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer .contacts ul li a:hover {
+    color: #007bff;
+}
+
+footer #newsletter .form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+footer #newsletter .form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    height: 44px;
+    padding-right: 40px;
+    border-radius: 4px;
+}
+
+footer #newsletter .form-control::placeholder {
+    color: #b0b5c3;
+}
+
+footer #newsletter button {
+    background-color: transparent;
+    border: none;
+    color: #0e5cad;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 44px;
+    width: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+footer #newsletter button:hover {
+    color: #fff;
+}
+
+footer .footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+footer .footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #b0b5c3;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer .footer-social a:hover {
+    background-color: #0e5cad;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+footer hr {
+    margin: 30px 0;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+footer .footer-selector span {
+    color: #b0b5c3;
+}
+
+footer .additional_links {
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+footer .additional_links li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+footer .additional_links li:last-child {
+    margin-right: 0;
+}
+
+footer .additional_links li a {
+    color: #b0b5c3;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer .additional_links li a:hover {
+    color: #fff;
+}
+
+@media (max-width: 991px) {
+    footer .additional_links {
+        text-align: left;
+        margin-top: 15px;
+    }
+}
+
+/* Ürün detay sayfası görselleri için özelleştirmeler */
+.prod_pics .item {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin: 10px 5px;
+}
+
+.prod_pics .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.prod_pics .item img {
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.prod_pics.owl-carousel .owl-stage-outer {
+    padding: 10px 0;
+}
+
+/* Ürün detay sayfası için ek stiller */
+.page_header h1 {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.page_header h1:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #0072bc;
+}
+
+.breadcrumbs ul li a:hover {
+    color: #0072bc;
+}
+
+/* Ürün açıklama bölümü için ek stiller */
+.prod_info h4 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.prod_info p {
+    line-height: 1.8;
+    color: #555;
+}
+
+.prod_info ul li {
+    margin-bottom: 8px;
+}
+
+/* Ürün açıklama bölümü için gelişmiş stiller */
+.prod_info.version_2 {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+    border: 1px solid #f0f0f0;
+}
+
+.prod_info.version_2 h4 {
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #222;
+    font-size: 22px;
+    position: relative;
+    padding-bottom: 15px;
+    display: inline-block;
+}
+
+.prod_info.version_2 h4:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 3px;
+    background: linear-gradient(90deg, #0072bc, #00a6ed);
+    border-radius: 3px;
+}
+
+.prod_info.version_2 p {
+    line-height: 1.9;
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.prod_info.version_2 small {
+    background-color: #f8f9fa;
+    padding: 4px 10px;
+    border-radius: 20px;
+    color: #666;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+}
+
+.prod_info.version_2 .tech-specs {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 30px;
+    border-left: 4px solid #0072bc;
+}
+
+.prod_info.version_2 .tech-specs h5 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #222;
+    font-size: 18px;
+}
+
+.prod_info.version_2 .tech-specs ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.prod_info.version_2 .tech-specs ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    color: #555;
+}
+
+.prod_info.version_2 .tech-specs ul li:before {
+    content: "\f058";
+    font-family: "bootstrap-icons";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #0072bc;
+}
+
+.prod_info.version_2 .tech-specs ul li strong {
+    color: #333;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+/* Teknik özellikler için geliştirilmiş stiller */
+.tech-specs-card .card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tech-specs-card .card-header {
+    padding: 15px 20px;
+    border-bottom: none;
+}
+
+.tech-specs-card .card-body {
+    padding: 20px;
+}
+
+.spec-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0;
+}
+
+.spec-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 77, 218, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.spec-icon i {
+    color: #004dda;
+    font-size: 18px;
+}
+
+.spec-content {
+    flex-grow: 1;
+}
+
+.spec-label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.spec-value {
+    display: block;
+    color: #666;
+    font-size: 14px;
+}
+
+.specs-list li {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.specs-list li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Teknik özellikler başlığı için profesyonel stil */
+.tech-specs-header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 18px 20px;
+    border: none;
+    border-bottom: 3px solid #004dda;
+}
+
+.tech-specs-header h5 {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.tech-specs-header i {
+    color: #FFC107;
+}
+
+/* Kart gövdesi için profesyonel stil */
+.tech-specs-card .card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Tabs iyileştirmeleri */
+.tabs_product.version_2 {
+    margin-top: 40px;
+}
+
+.tabs_product.version_2 .nav-tabs {
+    border: none;
+}
+
+.tabs_product.version_2 .nav-tabs .nav-item {
+    margin-right: 10px;
+}
+
+.tabs_product.version_2 .nav-tabs .nav-link {
+    border-radius: 30px;
+    background: #f8f9fa;
+    color: #555;
+    font-weight: 500;
+    padding: 10px 25px;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.tabs_product.version_2 .nav-tabs .nav-link.active,
+.tabs_product.version_2 .nav-tabs .nav-link:hover {
+    background: #0072bc;
+    color: #fff;
+    border-color: #0072bc;
+}
+
+.tab_content_wrapper .card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+    margin-bottom: 30px;
+}
+
+.tab_content_wrapper .card-header {
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 20px;
+    border-radius: 12px 12px 0 0 !important;
+}
+
+.tab_content_wrapper .card-body {
+    padding: 30px;
+}
+
+.tab_content_wrapper .card-body h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+/* Benzer ürünler bölümü iyileştirmeleri */
+.products_carousel .item {
+    margin: 10px;
+}
+
+.products_carousel .grid_item {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.products_carousel .grid_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.products_carousel .grid_item figure {
+    margin-bottom: 0;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+}
+
+.products_carousel .grid_item h3 {
+    padding: 20px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.products_carousel .grid_item .btn_1 {
+    margin: 0 20px 20px;
+    padding: 8px 20px;
+}
+
+/* Grid başlıkları için responsive font boyutu */
+.grid-title {
+    font-size: 1.08rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+    word-break: break-word;
+    text-align: center;
+}
+
+@media (max-width: 576px) {
+  .grid-title {
+    font-size: 0.82rem;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .marquee-container .grid-title.marquee {
+    animation: marquee 6s linear infinite;
+    text-overflow: unset;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  10% { transform: translateX(0%); }
+  90% { transform: translateX(-60%); }
+  100% { transform: translateX(-60%); }
+}
+
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+  display: block;
+}
+
+/* Ürün açıklaması için özel stiller */
+.product-code {
+    margin-bottom: 20px;
+    color: #777;
+}
+
+.advantages-list, .usage-list, .specs-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.advantages-list li, .usage-list li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.advantages-list li i, .usage-list li i {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: #004dda;
+}
+
+.specs-list li {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.specs-list li:last-child {
+    border-bottom: none;
+}
+
+.tech-specs-card .card-header {
+    background-color: #004dda;
+}
+
+.cta-box .card {
+    border-radius: 10px;
+    border: 1px solid rgba(0, 77, 218, 0.1);
+}
+
+.product-advantages h5, .usage-areas h5 {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Teknik özellikler için minimal tasarım */
+.tech-specs-card {
+    padding: 25px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+}
+
+.specs-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #004dda;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.specs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.spec-row {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #e9ecef;
+}
+
+.spec-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.spec-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+    color: #004dda;
+}
+
+.spec-icon i {
+    font-size: 18px;
+}
+
+.spec-content {
+    flex-grow: 1;
+}
+
+.spec-label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.spec-value {
+    display: block;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Modern Footer Styles */
+.modern-footer {
+    background-color: #fff;
+    padding: 50px 0 20px;
+    color: #333;
+    position: relative;
+    margin-top: 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer-column {
+    margin-bottom: 25px;
+}
+
+.footer-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.footer-title:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 2px;
+    width: 40px;
+    background-color: #007bff;
+    transform: translateX(-50%);
+}
+
+.footer-brand img {
+    margin-bottom: 15px;
+    max-width: 140px;
+}
+
+.footer-about {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #444;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: 0.95rem;
+    display: inline-block;
+    position: relative;
+}
+
+.footer-links a:hover {
+    color: #007bff;
+}
+
+.footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.footer-contact li {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-contact i {
+    color: #007bff;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.footer-contact a {
+    color: #444;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-contact a:hover {
+    color: #007bff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    color: #333;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.footer-divider {
+    margin: 20px 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-bottom {
+    padding-top: 10px;
+}
+
+.copyright p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #666;
+    text-align: center;
+}
+
+.footer-legal {
+    margin-top: 10px;
+}
+
+.legal-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.legal-links li a {
+    color: #666;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.legal-links li a:hover {
+    color: #007bff;
+}
+
+/* Responsive Footer */
+@media (max-width: 767px) {
+    .modern-footer {
+        padding: 30px 0 10px;
+    }
+    
+    .footer-title {
+        margin-bottom: 15px;
+    }
+    
+    .footer-links li {
+        margin-bottom: 8px;
+    }
+    
+    .footer-contact li {
+        margin-bottom: 12px;
+    }
+    
+    .social-icons {
+        gap: 10px;
+    }
+    
+    .social-icon {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .legal-links {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+/* Footer v2 - Profesyonel Tasarım */
+.footer-v2 {
+    background-color: #fff;
+    padding: 60px 0 20px;
+    color: #333;
+    position: relative;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer-v2 .footer-logo img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.footer-v2 .footer-about {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.footer-v2 .footer-heading {
+    color: #222;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-v2 .footer-heading:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #007bff;
+}
+
+.footer-v2 .footer-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-v2 .footer-nav li {
+    margin-bottom: 12px;
+}
+
+.footer-v2 .footer-nav li a {
+    color: #444;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.footer-v2 .footer-nav li a:hover {
+    color: #007bff;
+    padding-left: 5px;
+}
+
+.footer-v2 .footer-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-v2 .footer-contact-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.footer-v2 .footer-contact-list li i {
+    color: #007bff;
+    margin-right: 12px;
+    font-size: 16px;
+    margin-top: 3px;
+}
+
+.footer-v2 .footer-contact-list li a {
+    color: #444;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-v2 .footer-contact-list li a:hover {
+    color: #007bff;
+}
+
+.footer-v2 .footer-social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-v2 .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.footer-v2 .social-link:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.footer-v2 .footer-divider {
+    margin: 30px 0 20px;
+    border-top: 1px solid #eee;
+}
+
+.footer-v2 .footer-bottom-row {
+    padding-top: 10px;
+}
+
+.footer-v2 .copyright {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-v2 .footer-legal-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.footer-v2 .footer-legal-links li a {
+    color: #666;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-v2 .footer-legal-links li a:hover {
+    color: #007bff;
+}
+
+/* Responsive Footer v2 */
+@media (max-width: 991px) {
+    .footer-v2 {
+        padding: 40px 0 20px;
+    }
+    
+    .footer-v2 .col-lg-2,
+    .footer-v2 .col-lg-3,
+    .footer-v2 .col-lg-4 {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-v2 .footer-legal-links {
+        justify-content: flex-start;
+        margin-top: 15px;
+    }
+    
+    .footer-v2 .text-md-end {
+        text-align: left !important;
+    }
+}
+
+/* Dropdown menüde otomatik eklenen ok ikonunu gizle */
+.nav-dropdown > .dropdown-toggle::after {
+    display: none !important;
+}

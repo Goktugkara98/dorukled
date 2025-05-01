@@ -1,0 +1,249 @@
+{% extends "base.html" %}
+
+{% block title %}DorukLed Reklam | Profesyonel LED Çözümleri{% endblock %}
+
+{% block description %}DorukLed Reklam - Profesyonel LED Tabela, Dijital Menü Panosu, Neon ve Totem Çözümleri{% endblock %}
+
+{% block extra_css %}
+<style>
+/* Video container styling */
+.header-video {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.header-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+    .header-video {
+        height: 100vh;
+    }
+    
+    .modern-hero-title {
+        font-size: 2rem !important;
+    }
+    
+    .modern-hero-subtitle {
+        font-size: 1rem !important;
+    }
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="header-video">
+        <video autoplay muted loop playsinline id="hero-video">
+            <source src="{{ url_for('static', filename='video/dorukled-hero-video.mp4') }}" type="video/mp4">
+            <!-- Fallback image if video doesn't play -->
+            <img src="{{ url_for('static', filename='img/video_fix.png') }}" alt="DorukLed Hero">
+        </video>
+        
+        <!-- Modern overlay with gradient -->
+        <div class="video-overlay-modern position-absolute top-0 start-0 w-100 h-100"></div>
+        
+        <!-- Modern content overlay -->
+        <div class="hero-content-wrapper position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 text-center">
+                        <div class="modern-hero-content">
+                            <div class="hero-logo animate-fade-in">
+                                <img src="{{ url_for('static', filename='img/brands/dorukled.svg') }}" alt="DORUKLED" class="hero-logo-img">
+                            </div>
+                            <h1 class="modern-hero-title animate-fade-in center-title">DORUKLED REKLAM</h1>
+                            <p class="modern-hero-subtitle animate-fade-in">Profesyonel LED Tabela, Dijital Menü Panosu ve Neon Çözümlerinde Lider</p>
+                            <div class="modern-hero-buttons animate-fade-in">
+                                <a href="#products" class="btn-modern-explore btn-glass">
+                                    <span>KEŞFET</span>
+                                    <i class="ti-arrow-down"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /header-video -->
+    
+    <hr class="mb-0">
+    
+    <section id="products">
+        <div class="container margin_60_35">
+            <div class="main_title mb-4">
+                <h2>LED Ürünlerimiz</h2>
+                <span>LED Ürünlerimiz</span>
+                <p>İhtiyacınıza özel LED tabela, neon, dijital menü panosu ve daha fazlası DorukLed'de!</p>
+            </div>
+            
+            <div class="isotope-wrapper">
+                <div class="row small-gutters">
+                    <div class="col-6 col-md-4 col-xl-3 isotope-item sale">
+                        <div class="grid_item">
+                            <figure class="aspect-ratio-box-1x1">
+                                <a href="{{ url_for('main.flex_yazi_neon_tabelalar') }}">
+                                    <img class="img-fluid lazy" src="{{ url_for('static', filename='img/categories/flex-yazi-neon-tabelalar/flex-yazi-neon-tabela.png') }}" data-src="{{ url_for('static', filename='img/categories/flex-yazi-neon-tabelalar/flex-yazi-neon-tabela.png') }}" alt="Flex Neon Tabela">
+                                    <img class="img-fluid lazy" src="{{ url_for('static', filename='img/categories/flex-yazi-neon-tabelalar/flex-yazi-neon-tabela.png') }}" data-src="{{ url_for('static', filename='img/categories/flex-yazi-neon-tabelalar/flex-yazi-neon-tabela.png') }}" alt="Flex Neon Tabela">
+                                </a>
+                            </figure>
+                            <a href="{{ url_for('main.flex_yazi_neon_tabelalar') }}">
+                                <h3 class="grid-title">Flex Yazı Neon Tabelalar</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-3 isotope-item sale">
+                        <div class="grid_item">
+                            <figure class="aspect-ratio-box-1x1">
+                                <a href="{{ url_for('main.flex_ozel_tasarim_neon_tabelalar') }}">
+                                    <img class="img-fluid lazy" src="{{ url_for('static', filename='img/categories/flex-ozel-tasarim-neon-tabelalar/flex-ozel-tasarim-neon-tabela.png') }}" data-src="{{ url_for('static', filename='img/categories/flex-ozel-tasarim-neon-tabelalar/flex-ozel-tasarim-neon-tabela.png') }}" alt="Flex Özel Tasarım Neon Tabelalar">
+                                    <img class="img-fluid lazy" src="{{ url_for('static', filename='img/categories/flex-ozel-tasarim-neon-tabelalar/flex-ozel-tasarim-neon-tabela.png') }}" data-src="{{ url_for('static', filename='img/categories/flex-ozel-tasarim-neon-tabelalar/flex-ozel-tasarim-neon-tabela.png') }}" alt="Flex Özel Tasarım Neon Tabelalar">
+                                </a>
+                            </figure>
+                            <a href="{{ url_for('main.flex_ozel_tasarim_neon_tabelalar') }}">
+                                <h3 class="grid-title">Flex Özel Tasarım Neon Tabelalar</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-3 isotope-item sale">
+                        <div class="grid_item">
+                            <figure class="aspect-ratio-box-1x1">
+                                <a href="{{ url_for('main.ic_mekan_led_tabelalar') }}">
+                                    <img class="img-fluid lazy" src="{{ url_for('static', filename='img/categories/ic-mekan-led-tabelalar/ic-mekan-led-tabela.png') }}" data-src="{{ url_for('static', filename='img/categories/ic-mekan-led-tabelalar/ic-mekan-led-tabela.png') }}" alt="İç Mekan LED Tabelalar">
+                                    <img class="img-fluid lazy" src="{{ url_for('static', filename='img/categories/ic-mekan-led-tabelalar/ic-mekan-led-tabela.png') }}" data-src="{{ url_for('static', filename='img/categories/ic-mekan-led-tabelalar/ic-mekan-led-tabela.png') }}" alt="İç Mekan LED Tabelalar">
+                                </a>
+                            </figure>
+                            <a href="{{ url_for('main.ic_mekan_led_tabelalar') }}">
+                                <h3 class="grid-title">İç Mekan LED Tabelalar</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-3 isotope-item popular">
+                        <div class="grid_item">
+                            <figure class="aspect-ratio-box-1x1">
+                                <a href="{{ url_for('main.dis_mekan_led_tabelalar') }}">
+                                    <img class="img-fluid lazy" src="{{ url_for('static', filename='img/categories/dis-mekan-led-tabelalar/dis-mekan-led-tabela.png') }}" data-src="{{ url_for('static', filename='img/categories/dis-mekan-led-tabelalar/dis-mekan-led-tabela.png') }}" alt="Dış Mekan LED Tabelalar">
+                                    <img class="img-fluid lazy" src="{{ url_for('static', filename='img/categories/dis-mekan-led-tabelalar/dis-mekan-led-tabela.png') }}" data-src="{{ url_for('static', filename='img/categories/dis-mekan-led-tabelalar/dis-mekan-led-tabela.png') }}" alt="Dış Mekan LED Tabelalar">
+                                </a>
+                            </figure>
+                            <a href="{{ url_for('main.dis_mekan_led_tabelalar') }}">
+                                <h3 class="grid-title">Dış Mekan LED Tabelalar</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-3 isotope-item popular">
+                        <div class="grid_item">
+                            <figure class="aspect-ratio-box-1x1">
+                                <a href="{{ url_for('main.rgb_led_tabelalar') }}">
+                                    <img class="img-fluid lazy" src="{{ url_for('static', filename='img/categories/rgb-led-tabelalar/rgb-led-tabela.png') }}" data-src="{{ url_for('static', filename='img/categories/rgb-led-tabelalar/rgb-led-tabela.png') }}" alt="RGB LED Tabela">
+                                    <img class="img-fluid lazy" src="{{ url_for('static', filename='img/categories/rgb-led-tabelalar/rgb-led-tabela.png') }}" data-src="{{ url_for('static', filename='img/categories/rgb-led-tabelalar/rgb-led-tabela.png') }}" alt="RGB LED Tabela">
+                                </a>
+                            </figure>
+                            <a href="{{ url_for('main.rgb_led_tabelalar') }}">
+                                <h3 class="grid-title">RGB LED Tabelalar</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-3 isotope-item popular">
+                        <div class="grid_item">
+                            <figure class="aspect-ratio-box-1x1">
+                                <a href="{{ url_for('main.kayan_yazi_led_tabelalar') }}">
+                                    <img class="img-fluid lazy" src="{{ url_for('static', filename='img/categories/kayan-yazi-led-tabelalar/kayan-yazi-led-tabela.png') }}" data-src="{{ url_for('static', filename='img/categories/kayan-yazi-led-tabelalar/kayan-yazi-led-tabela.png') }}" alt="Kayan Yazı LED Tabelalar">
+                                    <img class="img-fluid lazy" src="{{ url_for('static', filename='img/categories/kayan-yazi-led-tabelalar/kayan-yazi-led-tabela.png') }}" data-src="{{ url_for('static', filename='img/categories/kayan-yazi-led-tabelalar/kayan-yazi-led-tabela.png') }}" alt="Kayan Yazı LED Tabelalar">
+                                </a>
+                            </figure>
+                            <a href="{{ url_for('main.kayan_yazi_led_tabelalar') }}">
+                                <h3 class="grid-title">Kayan Yazı LED Tabelalar</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-3 isotope-item popular">
+                        <div class="grid_item">
+                            <figure class="aspect-ratio-box-1x1">
+                                <a href="{{ url_for('main.ic_mekan_led_ekranlar') }}">
+                                    <img class="img-fluid lazy" src="{{ url_for('static', filename='img/categories/ic-mekan-led-ekranlar/ic-mekan-led-ekran.png') }}" data-src="{{ url_for('static', filename='img/categories/ic-mekan-led-ekranlar/ic-mekan-led-ekran.png') }}" alt="İç Mekan LED Ekranlar">
+                                    <img class="img-fluid lazy" src="{{ url_for('static', filename='img/categories/ic-mekan-led-ekranlar/ic-mekan-led-ekran.png') }}" data-src="{{ url_for('static', filename='img/categories/ic-mekan-led-ekranlar/ic-mekan-led-ekran.png') }}" alt="İç Mekan LED Ekranlar">
+                                </a>
+                            </figure>
+                            <a href="{{ url_for('main.ic_mekan_led_ekranlar') }}">
+                                <h3 class="grid-title">İç Mekan LED Ekranlar</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-3 isotope-item popular">
+                        <div class="grid_item">
+                            <figure class="aspect-ratio-box-1x1">
+                                <a href="{{ url_for('main.dis_mekan_led_ekranlar') }}">
+                                    <img class="img-fluid lazy" src="{{ url_for('static', filename='img/categories/dis-mekan-led-ekranlar/dis-mekan-led-ekran.png') }}" data-src="{{ url_for('static', filename='img/categories/dis-mekan-led-ekranlar/dis-mekan-led-ekran.png') }}" alt="Dış Mekan LED Ekranlar">
+                                    <img class="img-fluid lazy" src="{{ url_for('static', filename='img/categories/dis-mekan-led-ekranlar/dis-mekan-led-ekran.png') }}" data-src="{{ url_for('static', filename='img/categories/dis-mekan-led-ekranlar/dis-mekan-led-ekran.png') }}" alt="Dış Mekan LED Ekranlar">
+                                </a>
+                            </figure>
+                            <a href="{{ url_for('main.dis_mekan_led_ekranlar') }}">
+                                <h3 class="grid-title">Dış Mekan LED Ekranlar</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /bg_gray -->
+</main>
+<!-- /main -->
+{% endblock %}
+
+{% block scripts %}
+<!-- SPECIFIC SCRIPTS -->
+<script src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
+<script src="{{ url_for('static', filename='js/isotope.min.js') }}"></script>
+<script>
+    // Isotope filter
+    $(window).on('load',function(){
+      var $container = $('.isotope-wrapper');
+      $container.isotope({ itemSelector: '.isotope-item', layoutMode: 'masonry' });
+    });
+    $('.isotope_filter').on( 'click', 'a', 'change', function(){
+      var selector = $(this).attr('data-filter');
+      $('.isotope-wrapper').isotope({ filter: selector });
+    });
+</script>
+
+<script>
+    // Dynamically load video based on screen size
+    document.addEventListener('DOMContentLoaded', function() {
+        var video = document.getElementById('hero-video');
+        var desktopVideoSrc = "{{ url_for('static', filename='video/dorukled-hero-video.mp4') }}";
+        var mobileVideoSrc = "{{ url_for('static', filename='video/dorukled-hero-video-mobile.mp4') }}";
+        
+        function setVideoSource() {
+            if (window.matchMedia("(min-width: 768px)").matches) {
+                if (video.querySelector('source').src !== desktopVideoSrc) {
+                    video.querySelector('source').src = desktopVideoSrc;
+                    video.load(); // Important: reload the video after changing source
+                }
+            } else {
+                if (video.querySelector('source').src !== mobileVideoSrc) {
+                    video.querySelector('source').src = mobileVideoSrc;
+                    video.load(); // Important: reload the video after changing source
+                }
+            }
+        }
+        
+        // Set initial source
+        setVideoSource();
+        
+        // Update source on window resize
+        window.addEventListener('resize', setVideoSource);
+    });
+</script>
+{% endblock %}

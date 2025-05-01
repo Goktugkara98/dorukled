@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% block title %}Hakkımızda | DorukLed Reklam{% endblock %}
+{% block description %}DorukLed Reklam: Yenilikçi LED tabela, neon ve ekran çözümlerinde sektör lideri. Kurumsal vizyonumuz, değerlerimiz, uzman ekibimiz ve müşteri odaklı yaklaşımımız hakkında detaylı bilgi alın.{% endblock %}
+
+{% block content %}
+<main class="bg_white">
+    <!-- Kurumsal Başlık Bölümü -->
+    <section class="page-header bg-light py-5 border-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="fw-bold mb-2">Hakkımızda</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="{{ url_for('main.homepage') }}">Anasayfa</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Hakkımızda</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biz Kimiz Bölümü -->
+    <section class="about-intro py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="fw-bold mb-4">DorukLed Reklam</h2>
+                    <p class="lead">Sektördeki 15 yılı aşkın tecrübemizle LED tabela, neon tabela ve ekran teknolojilerinde yenilikçi çözümler sunuyoruz. Kurumsal ve bireysel müşterilerimizin ihtiyaçlarına özel, yüksek kaliteli ve uzun ömürlü ürünler geliştiriyoruz.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm rounded-3">
+                        <div class="card-body p-4">
+                            <h3 class="card-title fw-bold h4 mb-3">Vizyonumuz</h3>
+                            <p class="card-text">LED ve neon tabela teknolojilerinde yenilikçi ve öncü olmak, müşterilerimize estetik, güvenilir ve uzun ömürlü çözümler sunmak. Sektörde sürdürülebilir kalite ve müşteri memnuniyetini sağlamak.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm rounded-3">
+                        <div class="card-body p-4">
+                            <h3 class="card-title fw-bold h4 mb-3">Misyonumuz</h3>
+                            <p class="card-text">Müşterilerimizin ihtiyaçlarına yönelik yenilikçi, kaliteli ve enerji tasarruflu LED çözümleri sunarak, marka değerlerini en iyi şekilde yansıtmalarına yardımcı olmak ve sektörde güvenilir bir iş ortağı olmak.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Değerlerimiz Bölümü -->
+    <section class="about-values py-5 bg-light border-top border-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="fw-bold mb-0">Değerlerimiz</h2>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card text-center p-4 bg-white rounded-3 shadow-sm h-100">
+                        <div class="value-icon mb-3">
+                            <i class="bi bi-check-circle text-primary fs-1"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-2">Kalite ve Güvenilirlik</h3>
+                        <p class="mb-0">En yüksek kalitede malzeme ve işçilik standartlarını uygulayarak, uzun ömürlü ve güvenilir ürünler sunuyoruz.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card text-center p-4 bg-white rounded-3 shadow-sm h-100">
+                        <div class="value-icon mb-3">
+                            <i class="bi bi-lightbulb text-primary fs-1"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-2">Yenilikçilik</h3>
+                        <p class="mb-0">Sürekli gelişen teknolojileri takip ederek, sektördeki en yeni ve etkili çözümleri müşterilerimize sunuyoruz.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="value-card text-center p-4 bg-white rounded-3 shadow-sm h-100">
+                        <div class="value-icon mb-3">
+                            <i class="bi bi-people text-primary fs-1"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-2">Müşteri Odaklılık</h3>
+                        <p class="mb-0">Her müşterimizin benzersiz ihtiyaçlarını anlamak ve onlara özel çözümler sunmak için çalışıyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Neden Biz Bölümü -->
+    <section class="about-why py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="fw-bold mb-0">Neden DorukLed?</h2>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-3 h-100">
+                        <div class="card-body p-4">
+                            <h3 class="card-title fw-bold h4 mb-3">Uzman Ekip</h3>
+                            <p class="card-text">Her biri alanında uzman mühendis, tasarımcı ve montaj ekibimizle, projelerinizi titizlikle hayata geçiriyoruz. Eğitimli ve deneyimli kadromuz sayesinde, en karmaşık projelerde bile güvenle çözüm sunuyoruz.</p>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Proje yönetimi ve danışmanlık</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Yaratıcı tasarım ekibi</li>
+                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Profesyonel montaj ve teknik servis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-3 h-100">
+                        <div class="card-body p-4">
+                            <h3 class="card-title fw-bold h4 mb-3">Kaliteli Hizmet</h3>
+                            <p class="card-text">Yüksek kaliteli malzeme ve işçilik, zamanında teslimat ve hızlı servis anlayışımızla müşteri memnuniyetini ön planda tutuyoruz. Her bütçeye uygun, kişiselleştirilebilir çözümler sunuyoruz.</p>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Yüksek kaliteli malzeme ve işçilik</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Zamanında teslimat ve hızlı servis</li>
+                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Her bütçeye uygun, kişiselleştirilebilir çözümler</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim CTA Bölümü -->
+    <section class="about-cta py-5 bg-light border-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="fw-bold mb-3">Projeleriniz İçin Yanınızdayız</h2>
+                    <p class="lead mb-4">Projeleriniz ve ihtiyaçlarınız için bizimle iletişime geçmekten çekinmeyin. Uzman ekibimiz en kısa sürede size dönüş sağlayacaktır.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="tel://905442140301" class="btn btn-primary px-4 py-2"><i class="bi bi-telephone me-2"></i>+90 544 214 0301</a>
+                        <a href="{{ url_for('main.contact') }}" class="btn btn-outline-primary px-4 py-2"><i class="bi bi-envelope me-2"></i>İletişim Formu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.value-card {
+    transition: transform 0.3s ease;
+}
+.value-card:hover {
+    transform: translateY(-5px);
+}
+</style>
+{% endblock %}
