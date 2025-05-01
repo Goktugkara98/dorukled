@@ -56,7 +56,7 @@
 		offCanvas: {
 		  pageSelector: "#page"
 	   },
-		navbars: [{position:'bottom',content: ['<a href="#0">© 2024 Allaia</a>']}]}, 
+		navbars: [{position:'bottom',content: ['<a href="#0"> 2024 Allaia</a>']}]}, 
 		{
 		// configuration
 		clone: true,
@@ -67,22 +67,59 @@
 		}
 	});
 	
-	// Menu
-	$('a.open_close').on("click", function () {
-		$('.main-menu').toggleClass('show');
-		$('.layer').toggleClass('layer-is-visible');
-	});
-	$('a.show-submenu').on("click", function () {
-		$(this).next().toggleClass("show_normal");
-	});
-	$('a.show-submenu-mega').on("click", function () {
-		$(this).next().toggleClass("show_mega");
+	// Mobil Menü İşlemleri - Tamamen Sıfırdan Yazıldı
+	$(document).ready(function() {
+		// Hamburger menü açma
+		$('#hamburger-btn').on('click', function() {
+			$(this).toggleClass('active');
+			$('#main-menu').toggleClass('active');
+			$('.mobile-overlay').toggleClass('active');
+			$('body').toggleClass('menu-open');
+		});
+		
+		// Menü kapatma
+		$('#close-menu-btn, .mobile-overlay').on('click', function() {
+			$('#hamburger-btn').removeClass('active');
+			$('#main-menu').removeClass('active');
+			$('.mobile-overlay').removeClass('active');
+			$('body').removeClass('menu-open');
+			
+			// Tüm açık dropdown menüleri kapat
+			$('#main-menu ul.navbar-menu li.dropdown').removeClass('active');
+			$('#main-menu ul.navbar-menu li.dropdown .dropdown-menu').slideUp(200);
+		});
+		
+		// Mobil dropdown menüler
+		$('#main-menu ul.navbar-menu li.dropdown > a').on('click', function(e) {
+			if ($(window).width() < 992) {
+				e.preventDefault();
+				var $parent = $(this).parent();
+				
+				// Dropdown menüyü aç/kapat
+				$parent.toggleClass('active');
+				
+				// Eğer aktifse, dropdown menüyü göster, değilse gizle
+				if ($parent.hasClass('active')) {
+					$parent.find('.dropdown-menu').slideDown(300);
+				} else {
+					$parent.find('.dropdown-menu').slideUp(300);
+				}
+			}
+		});
+		
+		// Sayfa yüklendiğinde ve yeniden boyutlandırıldığında kontrol
+		$(window).on('resize', function() {
+			if ($(window).width() >= 992) {
+				$('#hamburger-btn').removeClass('active');
+				$('#main-menu').removeClass('active');
+				$('.mobile-overlay').removeClass('active');
+				$('body').removeClass('menu-open');
+				$('#main-menu ul.navbar-menu li.dropdown').removeClass('active');
+				$('#main-menu ul.navbar-menu li.dropdown .dropdown-menu').css('display', '');
+			}
+		});
 	});
 	
-	$('a.btn_search_mob').on("click", function () {
-		$('.search_mob_wp').slideToggle("fast");
-	});
-
 	// Carousel product page
 	$('.prod_pics').owlCarousel({
 		items: 1,
@@ -351,5 +388,45 @@
         })
     }, 1500);
 	
+	// Footer accordion for mobile
+	$(document).ready(function() {
+		// Footer accordion functionality for mobile devices
+		if ($(window).width() < 768) {
+			$('.footer-widget-title').click(function() {
+				$(this).toggleClass('active');
+				$(this).next('.footer-links, .footer-contact-info').slideToggle(300);
+			});
+		}
+		
+		// Reinitialize on window resize
+		$(window).resize(function() {
+			if ($(window).width() < 768) {
+				$('.footer-widget-title').off('click').click(function() {
+					$(this).toggleClass('active');
+					$(this).next('.footer-links, .footer-contact-info').slideToggle(300);
+				});
+			} else {
+				$('.footer-widget-title').off('click');
+				$('.footer-links, .footer-contact-info').show();
+			}
+		});
+	});
+
+	// Footer Mobil Accordion
+	$(document).ready(function() {
+		// Footer accordion toggle
+		$('.footer-accordion-toggle').on('click', function() {
+			var $this = $(this);
+			var $content = $this.next('.footer-accordion-content');
+			
+			// Toggle active class
+			$this.toggleClass('active');
+			$content.toggleClass('active');
+			
+			// Diğer açık accordion'ları kapat
+			$('.footer-accordion-toggle').not($this).removeClass('active');
+			$('.footer-accordion-content').not($content).removeClass('active');
+		});
+	});
 
 })(window.jQuery); 
