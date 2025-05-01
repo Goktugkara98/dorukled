@@ -1,0 +1,210 @@
+/* ===== Minimalist Footer CSS ===== */
+
+.minimalist-footer {
+    background-color: #ffffff;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    padding: 60px 0 0;
+    border-top: 1px solid #eaeaea;
+}
+
+/* Grid Yapısı */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Logo ve Slogan */
+.logo-area {
+    padding-right: 20px;
+}
+
+.footer-logo {
+    max-width: 140px;
+    margin-bottom: 15px;
+}
+
+.footer-slogan {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Başlıklar */
+.footer-heading {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 30px;
+    height: 2px;
+    background-color: #0e5cad;
+    transition: width 0.3s ease;
+}
+
+.footer-heading:hover::after {
+    width: 100%;
+}
+
+/* Menü Bağlantıları */
+.footer-menu-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-menu-container a {
+    color: #555;
+    text-decoration: none;
+    margin-bottom: 12px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    padding-left: 0;
+}
+
+.footer-menu-container a:hover {
+    color: #0e5cad;
+    padding-left: 5px;
+}
+
+/* İletişim Bilgileri */
+.footer-contact-info {
+    margin-bottom: 25px;
+}
+
+.footer-contact-info p {
+    margin-bottom: 12px;
+    color: #555;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-contact-info i {
+    color: #0e5cad;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.footer-contact-info a {
+    color: #555;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-contact-info a:hover {
+    color: #0e5cad;
+}
+
+/* Sosyal Medya */
+.social-icons-grid {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons-grid a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #f5f5f5;
+    color: #0e5cad;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icons-grid a:hover {
+    background-color: #0e5cad;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(14, 92, 173, 0.2);
+}
+
+.social-icons-grid i {
+    font-size: 16px;
+}
+
+/* Footer Alt Kısım */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid #eaeaea;
+}
+
+.copyright-text p {
+    color: #777;
+    font-size: 14px;
+    margin: 0;
+}
+
+.legal-links {
+    display: flex;
+    gap: 20px;
+}
+
+.legal-links a {
+    color: #777;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: #0e5cad;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .logo-area {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 767px) {
+    .minimalist-footer {
+        padding: 40px 0 0;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+    
+    .logo-area {
+        grid-column: span 1;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .legal-links {
+        margin-top: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
